@@ -1,2 +1,1 @@
-npm install
-grunt jenkins
+npm install;grunt jenkins;
