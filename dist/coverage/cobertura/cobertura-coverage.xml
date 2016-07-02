@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="19"  lines-covered="18"  line-rate="0.9473999999999999"  branches-valid="2"  branches-covered="2"  branch-rate="1"  timestamp="1466580710527" complexity="0" version="0.1">
+<sources>
+	<source>C:\Users\maneesh.thareja\Desktop\Tools Evaluation\CI\final\UI_Grunt_Git_Job</source>
+</sources>
+<packages>
+	<package name="src"  line-rate="0.9473999999999999"  branch-rate="1" >
+	<classes>
+		<class name="Player.js"  filename="src\Player.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="Player"  hits="5"  signature="()V" >
+				<lines><line number="1"  hits="5" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="5"  signature="()V" >
+				<lines><line number="4"  hits="5" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="2"  signature="()V" >
+				<lines><line number="10"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="2"  signature="()V" >
+				<lines><line number="15"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="1"  signature="()V" >
+				<lines><line number="24"  hits="1" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="1"  hits="1"  branch="false" />
+			<line number="4"  hits="1"  branch="false" />
+			<line number="6"  hits="5"  branch="false" />
+			<line number="7"  hits="5"  branch="false" />
+			<line number="10"  hits="1"  branch="false" />
+			<line number="12"  hits="2"  branch="false" />
+			<line number="15"  hits="1"  branch="false" />
+			<line number="17"  hits="2"  branch="true"  condition-coverage="100% (2/2)" />
+			<line number="18"  hits="1"  branch="false" />
+			<line number="21"  hits="1"  branch="false" />
+			<line number="24"  hits="1"  branch="false" />
+			<line number="26"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="Song.js"  filename="src\Song.js"  line-rate="0.6667000000000001"  branch-rate="1" >
+		<methods>
+			<method name="Song"  hits="5"  signature="()V" >
+				<lines><line number="1"  hits="5" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="5"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="1"  hits="1"  branch="false" />
+			<line number="5"  hits="1"  branch="false" />
+			<line number="8"  hits="0"  branch="false" />
+		</lines>
+		</class>
+		<class name="impressive.js"  filename="src\impressive.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="1"  signature="()V" >
+				<lines><line number="2"  hits="1" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="2"  hits="1"  branch="false" />
+			<line number="4"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="superb.js"  filename="src\superb.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="1"  signature="()V" >
+				<lines><line number="2"  hits="1" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="2"  hits="1"  branch="false" />
+			<line number="4"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+</packages>
+</coverage>

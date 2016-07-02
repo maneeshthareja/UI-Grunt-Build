@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+
+  <testsuite name="Player #resume" errors="2" tests="1" failures="1" time="0.005" timestamp="Sat Jul 02 2016 08:16:06 GMT+0530 (India Standard Time)">
+    
+      <testcase assertions="0" classname="Player #resume" name="should throw an exception if song is already playing" time="0.003">
+        
+          <failure><![CDATA[TypeError: undefined is not a constructor (evaluating 'this.addMatchers') in file:///C:/Users/maneesh.thareja/Desktop/Tools%20Evaluation/CI/final/UI_Grunt_Git_Job/spec/SpecHelper.js (line 4)]]></failure>
+        
+          <failure><![CDATA[Expected function to throw 'song is already playing', but it threw Error: song is already playing.]]></failure>
+        
+      </testcase>
+    
+  </testsuite>
+
+</testsuites>

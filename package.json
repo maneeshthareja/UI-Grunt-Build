@@ -1,0 +1,21 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "description": "Sample project of Grunt on Jenkins",
+  "keywords": [
+    "jenkins",
+    "grunt",
+    "sample"
+  ],
+  "author": "UX/UI",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-jasmine": "~0.4.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-plato": "~0.2.0",
+	"grunt-template-jasmine-istanbul": "0.2.0"
+  }
+}
