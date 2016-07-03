@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       options : {
         specs : 'spec/**/*.js',
 		junit: {
-                path: 'dist/testresults/.test'
+                path: 'dist/testresults'
         }
       }
     },
