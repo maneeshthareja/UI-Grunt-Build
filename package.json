@@ -19,7 +19,6 @@
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-plato": "~0.2.0",
 	"jshint-html-reporter":"*",
-	"jscs-html-reporter":"*",
-	"grunt-template-jasmine-istanbul": "0.2.0"
+	"jscs-html-reporter":"*"
   }
 }
