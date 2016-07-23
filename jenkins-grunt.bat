@@ -1,2 +1,2 @@
-npm install jshint-html-reporter --save
+npm install
 grunt jenkins
