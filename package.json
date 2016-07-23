@@ -10,7 +10,9 @@
   "author": "UX/UI",
   "license": "MIT",
   "devDependencies": {
-    "grunt-contrib-jasmine": "~0.4.0",
+    "grunt": "*",
+	"grunt-cli": "*",
+	"grunt-contrib-jasmine": "~0.4.0",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-concat": "~0.2.0",
     "grunt-contrib-jshint": "~0.10.0",
