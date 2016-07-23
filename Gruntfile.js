@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     clean: ['dist/*.js', 'test/testem.tap'],
     jshint: {
       all: ['src/*.js'],
-      options: grunt.file.readJSON('.jshintrc')
+      options: grunt.file.readJSON('.jshintrc') 
     },
     concat: {
       build: {
