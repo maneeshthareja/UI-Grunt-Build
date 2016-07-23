@@ -5,8 +5,16 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     clean: ['dist/*.js', 'test/testem.tap'],
     jshint: {
-      all: ['src/*.js'],
-      options: grunt.file.readJSON('.jshintrc') 
+	  all: {
+        src: [
+          'src/*.js'
+        ]
+      },
+      options: {
+		jshintrc:'.jshintrc',
+		reporter: require('jshint-html-reporter'),
+        reporterOutput: 'dist/jshintreport/index.html'
+	  },
     },
     concat: {
       build: {
@@ -59,5 +67,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov']);
-  grunt.registerTask('jenkins', ['jshint', 'clean', 'jasmine', 'plato', 'concat', 'uglify']);
+  grunt.registerTask('jenkins', ['clean', 'jshint', 'jasmine', 'plato', 'concat', 'uglify']);
 };
