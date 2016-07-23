@@ -1,71 +1,23 @@
-module.exports = function(grunt) {
-
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    clean: ['dist/*.js', 'test/testem.tap'],
-    jshint: {
-	  all: {
-        src: [
-          'src/*.js'
-        ]
-      },
-      options: {
-		jshintrc:'.jshintrc',
-		reporter: require('jshint-html-reporter'),
-        reporterOutput: 'dist/jshintreport/index.html'
-	  },
-    },
-    concat: {
-      build: {
-        files: {
-          'dist/<%= pkg.name %>.js': [
-            'src/superb.js',
-            'src/impressive.js',
-			'src/Player.js',
-			'src/Song.js'
-          ]
-        }
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-    jasmine : {
-      src : 'src/**/*.js',
-      options : {
-        specs : 'spec/**/*.js',
-		junit: {
-                path: 'dist/testresults'
-        }
-      }
-    },
-    plato: {
-      options: {
-        title: 'UI Project',
-        jshint: grunt.file.readJSON('.jshintrc')
-      },
-      metrics: {
-        files: {
-          'dist/metrics': [ 'src/*.js' ]
-        }
-      }
-    }
-  });
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-plato');
-  grunt.loadNpmTasks('grunt-contrib-jasmine'); 
-
-  // Default task(s).
-  grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov']);
-  grunt.registerTask('jenkins', ['clean', 'jshint', 'jasmine', 'plato', 'concat', 'uglify']);
-};
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "description": "Sample project of Grunt on Jenkins",
+  "keywords": [
+    "jenkins",
+    "grunt",
+    "sample"
+  ],
+  "author": "UX/UI",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-jasmine": "~0.4.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-plato": "~0.2.0",
+	"jshint-html-reporter":"*",
+	"jscs-html-reporter":"*",
+	"grunt-template-jasmine-istanbul": "0.2.0"
+  }
+}
