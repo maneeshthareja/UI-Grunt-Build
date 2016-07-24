@@ -14,12 +14,14 @@
     "grunt-cli": "*",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-concat": "~0.2.0",
-    "grunt-contrib-jasmine": "~0.4.0",
+    "grunt-contrib-jasmine": "~0.6.0",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-jscs": "^3.0.1",
     "grunt-plato": "~0.2.0",
     "jscs-html-reporter": "*",
-    "jshint-html-reporter": "*"
+    "jshint-html-reporter": "*",
+	"grunt-template-jasmine-istanbul": "^0.4.0",
+	"phantomjs-prebuilt": "^2.1.7"
   }
 }

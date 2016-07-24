@@ -59,7 +59,23 @@ module.exports = function(grunt) {
 		junit: {
             path: 'dist/testresults'
         }
-      }
+      },
+	  istanbul: {
+        src: 'src/**/*.js',
+        options: {
+            specs: 'spec/**/*.js',
+            template: require('grunt-template-jasmine-istanbul'),
+            templateOptions: {
+                coverage: 'dist/coverage/coverage.json',
+                report: [
+                    {type: 'lcov', options: {dir: 'dist/coverage'}},
+                    {type: 'html', options: {dir: 'dist/coverage'}},
+                    {type: 'cobertura', options: {dir: 'dist/coverage/cobertura'}},
+                    {type: 'text-summary'}
+                ]
+				}
+			}
+		}
     },
     plato: {
       options: {
@@ -80,8 +96,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-plato');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
   grunt.loadNpmTasks("grunt-jscs");
+  grunt.loadNpmTasks('grunt-template-jasmine-istanbul');
 
   // Default task(s).
   grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov']);
+  grunt.registerTask('coverage', ['jasmine:istanbul']);
   grunt.registerTask('jenkins', ['clean','jscs', 'jshint', 'jasmine', 'plato', 'concat', 'uglify']);
 };
