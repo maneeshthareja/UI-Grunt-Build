@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     clean: ['dist/*.js', 'test/testem.tap'],
-    jshint: {
+	jshint: {
 	  all: {
         src: [
           'src/*.js'
@@ -13,8 +13,23 @@ module.exports = function(grunt) {
       options: {
 		jshintrc:'.jshintrc',
 		reporter: require('jshint-html-reporter'),
-        reporterOutput: 'dist/jshintreport/index.html'
+        reporterOutput: 'dist/jshintreport/jshint-report.html'
 	  },
+    },
+    jscs: {
+      all: {
+        src: [
+          'src/*.js'
+        ]
+      },
+      options: {
+        config: '.jscsrc',
+        reporter: require('jscs-html-reporter').path,
+        reporterOutput: 'dist/jshintreport/jscs-report.html'
+      },
+      test: {
+        src: ['spec/{,*/}*.js']
+      }
     },
     concat: {
       build: {
@@ -42,7 +57,7 @@ module.exports = function(grunt) {
       options : {
         specs : 'spec/**/*.js',
 		junit: {
-                path: 'dist/testresults'
+            path: 'dist/testresults'
         }
       }
     },
@@ -64,8 +79,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-plato');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks("grunt-jscs");
 
   // Default task(s).
   grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov']);
-  grunt.registerTask('jenkins', ['clean', 'jshint', 'jasmine', 'plato', 'concat', 'uglify']);
+  grunt.registerTask('jenkins', ['clean','jscs', 'jshint', 'jasmine', 'plato', 'concat', 'uglify']);
 };
