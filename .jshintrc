@@ -12,8 +12,8 @@
     "node":     true,
     "onevar":   true,
     "quotmark": "double",
-    "strict":   true,
+    "strict":   false,
     "trailing": true,
-    "undef":    true,
-    "unused":   true
+    "undef":    false,
+    "unused":   false
 }
